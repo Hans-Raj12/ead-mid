@@ -1,4 +1,5 @@
 import React from 'react'
+import AnotherUserParticipation from './AnotherUserParticipation'
 
 export default function UserParticipation(props) {
     
@@ -27,6 +28,8 @@ export default function UserParticipation(props) {
             </fieldset>
             
         </form>
+
+        <AnotherUserParticipation/>
     </div>
   )
 }

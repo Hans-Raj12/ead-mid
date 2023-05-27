@@ -11,3 +11,18 @@ form{
     justify-content: space-between;
     width: 50%;
 }
+
+.another-user-btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 20px;
+}
+
+.another-user-btn button{
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
