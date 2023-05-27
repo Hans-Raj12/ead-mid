@@ -1,0 +1,13 @@
+form{
+    width: 50%;
+}
+.choice{
+    display: flex;
+    justify-content: space-between;
+}
+
+.votes{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
