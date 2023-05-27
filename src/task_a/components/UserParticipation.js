@@ -1,19 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import AnotherUserParticipation from './AnotherUserParticipation'
+import ThankYouMessage from './ThankYouMessage'
 
 export default function UserParticipation(props) {
     
 
     const {question, choices} = props.data
-    
+    const [submitted, setSubmitted] = useState(false)
 
     const handleSubmit = (e) => {
-        e.preventDefault()        
+        e.preventDefault() 
+        setSubmitted(true)
     }
 
     return (
     <div>
-        <form name='votes-form' onSubmit={handleSubmit}>
+        {submitted?(<ThankYouMessage/>): ( <form name='votes-form' onSubmit={handleSubmit}>
             <h1>{question}</h1>
             <fieldset id='choice-group' name='choices'>
                 {choices&& choices.map((choice)=>{
@@ -28,6 +30,8 @@ export default function UserParticipation(props) {
             </fieldset>
             
         </form>
+        )
+        }
 
         <AnotherUserParticipation/>
     </div>
