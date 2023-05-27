@@ -1,9 +1,10 @@
 import './App.css';
-
+import Timer from './task_b/components/Timer';
 function App() {
   return (
     <div className="App">
-      <h1>My app component</h1>
+      {/* Task-B */}
+      <Timer initial={10}/>
     </div>
   );
 }
