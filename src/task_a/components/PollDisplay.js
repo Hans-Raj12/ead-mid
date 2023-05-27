@@ -1,5 +1,6 @@
 import React, {useEffect, useLayoutEffect, useState} from 'react'
 import './style.css'
+import UserParticipation from './UserParticipation'
 const poll_questions = [
     {
 
@@ -36,7 +37,7 @@ export default function PollDisplay() {
      <>   
         <form  name='votes-form'>
             <h3>{`1. ${question.question}`}</h3>
-            <fieldset id='group1' name="choices">
+            <fieldset name="choices">
             {question.choices&& question.choices.map((choice)=>{
                     return(
                         <div className='choice'>
@@ -58,7 +59,7 @@ export default function PollDisplay() {
             })}
     </div>
 
-
+    <UserParticipation data={question}/>
     </>
   )
 }
